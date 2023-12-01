@@ -13,20 +13,19 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyD_UQT0nGeyyH6FeLdp9DhdjlfJfOK2m28',
-  authDomain: 'robust-tracker-399622.firebaseapp.com',
-  projectId: 'robust-tracker-399622',
-  storageBucket: 'robust-tracker-399622.appspot.com',
-  messagingSenderId: '568356302154',
-  appId: '1:568356302154:web:f89365fccd0df7a2c3a5b3',
+  apiKey: "AIzaSyAPpfzM-nXrEu0GPJkupkugLN16Ay1EJrM",
+  authDomain: "geogussr-clone-ac993.firebaseapp.com",
+  databaseURL: "https://geogussr-clone-ac993-default-rtdb.firebaseio.com",
+  projectId: "geogussr-clone-ac993",
+  storageBucket: "geogussr-clone-ac993.appspot.com",
+  messagingSenderId: "146470128098",
+  appId: "1:146470128098:web:04f25ccb81487f3da711bb"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getDatabase();
-connectAuthEmulator(auth, 'http://127.0.0.1:9099');
-connectDatabaseEmulator(db, '127.0.0.1', 9000);
+const db = getDatabase(app);
 
 // Sign in form submitTypeInput holds value of submitted method (sign in / register)
 const submitTypeInput = document.getElementById('submit-type');
